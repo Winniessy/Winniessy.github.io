@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -77,16 +77,25 @@
     }
 
     .markdown-section h1 {
-      margin-bottom: 18px;
-      font-size: clamp(2rem, 5vw, 3.8rem);
-      line-height: 1.02;
+      margin: 0 0 18px;
+      font-size: clamp(1.8rem, 3vw, 2.45rem);
+      line-height: 1.18;
+      word-break: break-word;
     }
 
     .markdown-section h2 {
-      margin-top: 42px;
-      padding-bottom: 10px;
+      margin-top: 36px;
+      padding-bottom: 8px;
       border-bottom: 1px solid var(--line);
-      font-size: 1.45rem;
+      font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+      line-height: 1.28;
+      word-break: break-word;
+    }
+
+    .markdown-section h3 {
+      margin-top: 28px;
+      font-size: 1.18rem;
+      line-height: 1.32;
     }
 
     .markdown-section a {
