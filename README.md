@@ -1,4 +1,4 @@
-﻿# Winniessy Learning Hub
+# Winniessy Learning Hub
 
 <div class="home-hero">
   <div>
@@ -80,6 +80,11 @@
   </a>
 </div>
 
+## 最新收录
+
+<!-- AUTO_NOTES_START -->
+<!-- AUTO_NOTES_END -->
+
 ## 学习标签
 
 <div class="tag-cloud">
@@ -92,5 +97,3 @@
   <span>Markdown</span>
   <span>项目复盘</span>
 </div>
-
-
