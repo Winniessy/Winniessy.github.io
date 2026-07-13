@@ -83,6 +83,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Note - 2026-07-13
 <!-- AUTO_NOTES_END -->
 
 ## 学习标签

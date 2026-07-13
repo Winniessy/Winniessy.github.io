@@ -46,3 +46,48 @@ git add README.md _sidebar.md linux mcu projects notes scripts
 git commit -m "Add learning note"
 git push
 ```
+## 备注
+可以，直接复制粘贴当然行，但我已经给你做了一个更省事的导入器。
+
+现在新增了：
+
+```text
+scripts/import-note.ps1
+notes/import-feishu.md
+```
+
+并且首页 `README.md` 里加了“最新收录”自动区，`_sidebar.md` 里也加了导入说明入口。已推送：
+
+```text
+2b42ed5 Add note import helper
+```
+
+以后从飞书导入一篇笔记的流程是：
+
+1. 在飞书里复制笔记正文
+2. 回到 VS Code 终端，进入 `my-site`
+3. 运行，例如导入到 Linux 板块：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\import-note.ps1 -Section linux -Title "Linux 文件权限学习" -Tags Linux,Shell
+```
+
+它会自动：
+
+- 创建一篇 `.md`
+- 加到 `_sidebar.md`
+- 加到首页 `README.md` 的“最新收录”
+
+然后你只需要提交推送：
+
+```powershell
+git add README.md _sidebar.md linux notes scripts
+git commit -m "Add learning note"
+git push
+```
+
+如果标题是中文，脚本会自动生成时间戳文件名；如果你想文件名好看一点，可以加 `-Slug`：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\import-note.ps1 -Section mcu -Title "GPIO 输入输出" -Slug gpio-basic -Tags MCU,GPIO
+```
