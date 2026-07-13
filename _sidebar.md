@@ -8,6 +8,7 @@
 - MCU 学习之旅
   - [路线首页](/mcu/)
   - [嵌入式入门地图](/mcu/embedded-basics.md)
+  - [MCU的中断](/notes/mcu.md)
 
 - 项目记录
   - [项目首页](/projects/)
