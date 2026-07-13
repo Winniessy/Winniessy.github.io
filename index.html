@@ -28,6 +28,44 @@
     .markdown-section code {
       border-radius: 4px;
     }
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 28px 0 36px;
+    }
+
+    .journey-card {
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 20px;
+      border: 1px solid rgba(37, 111, 93, 0.18);
+      border-radius: 8px;
+      color: #172026;
+      background: #f8fbfa;
+      text-decoration: none !important;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .journey-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(37, 111, 93, 0.48);
+      box-shadow: 0 12px 28px rgba(23, 32, 38, 0.08);
+    }
+
+    .journey-card span {
+      color: #1f5f50;
+      font-size: 1.12rem;
+      font-weight: 700;
+    }
+
+    .journey-card small {
+      color: #5d6c67;
+      line-height: 1.55;
+    }
   </style>
 </head>
 <body>
@@ -51,3 +89,4 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
 </body>
 </html>
+

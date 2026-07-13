@@ -1,23 +1,32 @@
-﻿# Winniessy 的学习记录
+﻿# Winniessy 的学习空间
 
-这里用来整理我的项目文档、学习笔记和踩坑过程。
+把学习路线、项目记录和踩坑笔记整理在这里。首页只放入口，具体内容放到不同栏目里慢慢积累。
 
-## 最近记录
+<div class="journey-grid">
+  <a class="journey-card" href="#/linux/">
+    <span>Linux 学习之旅</span>
+    <small>命令行、Shell、系统管理和开发环境。</small>
+  </a>
+  <a class="journey-card" href="#/mcu/">
+    <span>MCU 学习之旅</span>
+    <small>嵌入式基础、外设、调试和项目实践。</small>
+  </a>
+  <a class="journey-card" href="#/projects/">
+    <span>项目记录</span>
+    <small>把想法、实现过程和复盘沉淀下来。</small>
+  </a>
+  <a class="journey-card" href="#/notes/">
+    <span>其他学习笔记</span>
+    <small>网站搭建、工具使用和临时记录。</small>
+  </a>
+</div>
+
+## 最近更新
 
 - [GitHub Pages 404 排查](notes/github-pages-404.md)
 - [个人网站搭建记录](notes/personal-website.md)
 - [Markdown 写作模板](notes/markdown-template.md)
 
-## 我会在这里记录什么
+## 写作方式
 
-- 项目从想法到实现的过程
-- 学习一个新工具时的关键步骤
-- 遇到错误时的排查思路
-- 常用命令、配置和参考链接
-
-## 新增一篇笔记的方法
-
-1. 在 `notes/` 文件夹里新建一个 `.md` 文件。
-2. 按照模板写内容。
-3. 在 `_sidebar.md` 里加一个链接。
-4. 提交并推送到 GitHub。
+每次新增内容时，新建一个 `.md` 文件，再把链接加到 `_sidebar.md`。先记录过程，不追求一开始就完美。
