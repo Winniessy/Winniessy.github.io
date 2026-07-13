@@ -3,68 +3,414 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Winniessy 的学习记录</title>
+  <title>Winniessy Learning Hub</title>
   <meta name="description" content="Winniessy 的项目文档、学习记录和踩坑笔记。">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
     :root {
       --theme-color: #256f5d;
+      --ink: #172026;
+      --muted: #66756f;
+      --line: rgba(23, 32, 38, 0.11);
+      --paper: #ffffff;
+      --page: #f4f6f3;
+      --green: #256f5d;
+      --blue: #315f9f;
+      --amber: #a7661f;
+      --rose: #a33f55;
     }
 
     body {
+      color: var(--ink);
+      background: var(--page);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .app-name-link img {
+      max-width: 40px;
+    }
+
+    .sidebar {
+      border-right: 1px solid var(--line);
+      background: #fbfcfa;
+    }
+
+    .sidebar h1 {
+      margin: 24px 0 18px;
+      font-size: 1.15rem;
+      letter-spacing: 0;
+    }
+
+    .sidebar ul li a {
+      border-radius: 6px;
+      color: #33413c;
+      font-size: 0.95rem;
+    }
+
+    .sidebar ul li.active > a,
+    .sidebar ul li a:hover {
+      color: var(--green);
+      background: rgba(37, 111, 93, 0.08);
+      text-decoration: none;
+    }
+
+    .search {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search input {
+      border-radius: 8px;
+      background: #fff;
     }
 
     .markdown-section {
-      max-width: 860px;
+      max-width: 980px;
+      padding: 42px 28px 80px;
     }
 
     .markdown-section h1,
     .markdown-section h2,
     .markdown-section h3 {
+      color: var(--ink);
       letter-spacing: 0;
     }
 
-    .markdown-section code {
-      border-radius: 4px;
-    }
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin: 28px 0 36px;
+    .markdown-section h1 {
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.02;
     }
 
-    .journey-card {
-      min-height: 140px;
+    .markdown-section h2 {
+      margin-top: 42px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 1.45rem;
+    }
+
+    .markdown-section a {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .markdown-section code {
+      border-radius: 5px;
+    }
+
+    .home-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 22px;
+      align-items: stretch;
+      margin: 8px 0 20px;
+      padding: 30px;
+      border: 1px solid rgba(23, 32, 38, 0.1);
+      border-radius: 8px;
+      background: #15201d;
+      color: #fff;
+      box-shadow: 0 18px 50px rgba(23, 32, 38, 0.14);
+    }
+
+    .home-hero h1 {
+      max-width: 760px;
+      margin: 0;
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.05;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #9bd3c2;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 1.02rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 8px;
+      color: #14201d;
+      background: #f6d48c;
+      text-decoration: none !important;
+    }
+
+    .hero-actions a + a {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .hero-panel {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 18px;
+      min-height: 190px;
       padding: 20px;
-      border: 1px solid rgba(37, 111, 93, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 8px;
-      color: #172026;
-      background: #f8fbfa;
-      text-decoration: none !important;
-      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      background: rgba(255, 255, 255, 0.08);
     }
 
-    .journey-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(37, 111, 93, 0.48);
-      box-shadow: 0 12px 28px rgba(23, 32, 38, 0.08);
-    }
-
-    .journey-card span {
-      color: #1f5f50;
-      font-size: 1.12rem;
+    .hero-panel span {
+      color: #9bd3c2;
+      font-size: 0.86rem;
       font-weight: 700;
     }
 
-    .journey-card small {
-      color: #5d6c67;
+    .hero-panel strong {
+      color: #fff;
+      font-size: 1.55rem;
+      line-height: 1.15;
+    }
+
+    .hero-panel small {
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.5;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 28px;
+    }
+
+    .stats-row div {
+      min-height: 92px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .stats-row strong,
+    .stats-row span {
+      display: block;
+    }
+
+    .stats-row strong {
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    .stats-row span {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .forum-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 18px 0 34px;
+    }
+
+    .forum-card {
+      min-height: 150px;
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--green);
+      border-radius: 8px;
+      color: var(--ink) !important;
+      background: var(--paper);
+      text-decoration: none !important;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .forum-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(23, 32, 38, 0.1);
+    }
+
+    .forum-card.mcu {
+      border-left-color: var(--blue);
+    }
+
+    .forum-card.project {
+      border-left-color: var(--amber);
+    }
+
+    .forum-card.notes {
+      border-left-color: var(--rose);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--green);
+      font-weight: 800;
+    }
+
+    .mcu .card-icon {
+      background: var(--blue);
+    }
+
+    .project .card-icon {
+      background: var(--amber);
+    }
+
+    .notes .card-icon {
+      background: var(--rose);
+    }
+
+    .forum-card span,
+    .forum-card small,
+    .forum-card em {
+      display: block;
+    }
+
+    .forum-card span {
+      color: var(--ink);
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    .forum-card small {
+      margin-top: 8px;
+      color: var(--muted);
       line-height: 1.55;
+    }
+
+    .forum-card em {
+      padding: 5px 9px;
+      border-radius: 999px;
+      color: #4f5e58;
+      background: #eef2ef;
+      font-style: normal;
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topic-list {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 30px;
+    }
+
+    .topic-item {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 12px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink) !important;
+      background: var(--paper);
+      text-decoration: none !important;
+    }
+
+    .topic-item strong,
+    .topic-item small {
+      display: block;
+      grid-column: 2;
+    }
+
+    .topic-item strong {
+      font-size: 1.02rem;
+    }
+
+    .topic-item small {
+      margin-top: 5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .badge {
+      grid-row: 1 / span 2;
+      align-self: start;
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--rose);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .badge.green {
+      background: var(--green);
+    }
+
+    .badge.blue {
+      background: var(--blue);
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 30px;
+    }
+
+    .tag-cloud span {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #44514d;
+      background: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .rule-box {
+      padding: 18px 20px;
+      border: 1px solid rgba(167, 102, 31, 0.22);
+      border-radius: 8px;
+      background: #fff8ea;
+    }
+
+    .rule-box p {
+      margin: 8px 0;
+    }
+
+    @media (max-width: 760px) {
+      .markdown-section {
+        padding: 28px 18px 64px;
+      }
+
+      .home-hero,
+      .forum-grid,
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .forum-card {
+        grid-template-columns: 48px minmax(0, 1fr);
+      }
+
+      .forum-card em {
+        grid-column: 2;
+        justify-self: start;
+      }
     }
   </style>
 </head>
@@ -89,4 +435,3 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
 </body>
 </html>
-
