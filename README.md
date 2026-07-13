@@ -2,8 +2,8 @@
 
 <div class="home-hero">
   <div>
-    <p class="eyebrow">个人学习论坛</p>
-    <h1>把每天学到的东西，整理成可以回看的地图。</h1>
+    <p class="eyebrow">Welcome to Winniessy</p>
+    <h1>整理、归纳学习路线与资料。</h1>
     <p class="hero-copy">这里像一个小型知识社区：每条学习路线是一个板块，每篇笔记是一条帖子，项目记录则是阶段性成果。</p>
     <div class="hero-actions">
       <a href="#/linux/">进入 Linux 板块</a>
@@ -23,7 +23,7 @@
   <div><strong>Docsify</strong><span>Markdown 驱动</span></div>
 </div>
 
-## 热门板块
+## 学习板块
 
 <div class="forum-grid">
   <a class="forum-card linux" href="#/linux/">
@@ -60,7 +60,7 @@
   </a>
 </div>
 
-## 置顶帖
+## 笔记
 
 <div class="topic-list">
   <a class="topic-item pinned" href="#/notes/github-pages-404.md">
@@ -93,9 +93,4 @@
   <span>项目复盘</span>
 </div>
 
-## 写作规则
 
-<div class="rule-box">
-  <p><strong>新增一篇笔记：</strong>在对应文件夹中新建 `.md`，再把链接加到 `_sidebar.md`。</p>
-  <p><strong>推荐格式：</strong>目标 → 过程 → 问题 → 解决 → 总结 → 下一步。</p>
-</div>
