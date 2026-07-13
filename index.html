@@ -3,421 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Winnie Shan | 个人作品集</title>
-  <meta name="description" content="Winnie Shan 的个人作品集，展示数据分析、自动化工具和前端项目。">
+  <title>Winniessy 的学习记录</title>
+  <meta name="description" content="Winniessy 的项目文档、学习记录和踩坑笔记。">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --theme-color: #256f5d;
     }
 
     body {
-      min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-      color: #172026;
-      background: #f7f8f5;
-      line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    .markdown-section {
+      max-width: 860px;
     }
 
-    .container {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid rgba(23, 32, 38, 0.1);
-      background: rgba(247, 248, 245, 0.9);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav {
-      min-height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      font-size: 1.05rem;
-      font-weight: 700;
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3 {
       letter-spacing: 0;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      color: #53615c;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: #172026;
-    }
-
-    .hero {
-      min-height: calc(100vh - 68px);
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-      align-items: center;
-      gap: 56px;
-      padding: 52px 0 72px;
-    }
-
-    .eyebrow {
-      margin-bottom: 18px;
-      color: #436b5d;
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
-
-    h1 {
-      max-width: 760px;
-      font-size: clamp(2.65rem, 7vw, 5.8rem);
-      line-height: 0.96;
-      letter-spacing: 0;
-    }
-
-    .intro {
-      max-width: 620px;
-      margin-top: 24px;
-      color: #53615c;
-      font-size: 1.08rem;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 32px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 18px;
-      border: 1px solid #172026;
-      border-radius: 8px;
-      font-weight: 700;
-      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-    }
-
-    .button.primary {
-      color: #fff;
-      background: #172026;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero-media {
-      position: relative;
-      min-height: 520px;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #d9e2dc;
-      box-shadow: 0 24px 80px rgba(23, 32, 38, 0.16);
-    }
-
-    .hero-media img {
-      width: 100%;
-      height: 100%;
-      min-height: 520px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1px;
-      margin-top: -36px;
-      background: rgba(23, 32, 38, 0.12);
-      border: 1px solid rgba(23, 32, 38, 0.12);
-    }
-
-    .stat {
-      min-height: 108px;
-      padding: 22px;
-      background: #fff;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.55rem;
-      line-height: 1.1;
-    }
-
-    .stat span {
-      display: block;
-      margin-top: 8px;
-      color: #60706a;
-      font-size: 0.92rem;
-    }
-
-    section {
-      padding: 92px 0;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 28px;
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      line-height: 1.05;
-      letter-spacing: 0;
-    }
-
-    .section-head p {
-      max-width: 520px;
-      color: #60706a;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .project-card {
-      overflow: hidden;
-      border: 1px solid rgba(23, 32, 38, 0.1);
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .project-card img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      display: block;
-    }
-
-    .project-body {
-      padding: 22px;
-    }
-
-    .project-body h3 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-    }
-
-    .project-body p {
-      color: #60706a;
-      font-size: 0.95rem;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .tag {
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: #eef3f0;
-      color: #436b5d;
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 42px;
-      align-items: start;
-      border-top: 1px solid rgba(23, 32, 38, 0.12);
-      border-bottom: 1px solid rgba(23, 32, 38, 0.12);
-    }
-
-    .about p {
-      color: #53615c;
-      font-size: 1.04rem;
-    }
-
-    .contact-band {
-      padding: 64px 0;
-      color: #fff;
-      background: #172026;
-    }
-
-    .contact-band .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 26px;
-    }
-
-    .contact-band p {
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .contact-links a {
-      min-height: 42px;
-      display: inline-flex;
-      align-items: center;
-      padding: 0 15px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      border-radius: 8px;
-    }
-
-    footer {
-      padding: 26px 0;
-      color: #72807a;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 820px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
-        padding: 14px 0;
-      }
-
-      .hero,
-      .about,
-      .contact-band .container {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: auto;
-        gap: 34px;
-      }
-
-      .hero-media,
-      .hero-media img {
-        min-height: 360px;
-      }
-
-      .stats,
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-head,
-      .contact-band .container {
-        align-items: flex-start;
-        flex-direction: column;
-      }
+    .markdown-section code {
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="container nav" aria-label="主导航">
-      <a class="brand" href="#top">Winnie Shan</a>
-      <div class="nav-links">
-        <a href="#projects">项目</a>
-        <a href="#about">关于</a>
-        <a href="#contact">联系</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="top">
-    <div class="container hero">
-      <div>
-        <p class="eyebrow">个人作品集</p>
-        <h1>把想法做成清晰、好用、能上线的作品。</h1>
-        <p class="intro">你好，我是 Winnie。这里记录我做过的数据分析、自动化工具和前端项目，也会持续更新新的实验与学习成果。</p>
-        <div class="actions">
-          <a class="button primary" href="#projects">查看项目</a>
-          <a class="button" href="mailto:yourname@example.com">发邮件</a>
-        </div>
-      </div>
-      <div class="hero-media" aria-label="工作台照片">
-        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="带电脑和笔记本的工作台">
-      </div>
-    </div>
-
-    <div class="container stats" aria-label="个人亮点">
-      <div class="stat"><strong>3+</strong><span>核心项目方向</span></div>
-      <div class="stat"><strong>Web</strong><span>前端与静态网站</span></div>
-      <div class="stat"><strong>Data</strong><span>数据整理与可视化</span></div>
-    </div>
-
-    <section class="container" id="projects">
-      <div class="section-head">
-        <h2>精选项目</h2>
-        <p>每个项目都围绕一个真实问题展开，从信息整理、交互设计到页面落地，尽量做得轻量、可靠、容易维护。</p>
-      </div>
-      <div class="project-grid">
-        <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85" alt="数据看板屏幕">
-          <div class="project-body">
-            <h3>数据分析看板</h3>
-            <p>整理业务指标并制作可视化面板，帮助团队快速查看趋势、异常和关键数据。</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">ECharts</span><span class="tag">分析</span></div>
-          </div>
-        </article>
-        <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=85" alt="代码编辑器">
-          <div class="project-body">
-            <h3>自动化脚本工具</h3>
-            <p>用脚本处理重复性网页操作和数据采集流程，减少手动整理的时间成本。</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">自动化</span></div>
-          </div>
-        </article>
-        <article class="project-card">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85" alt="前端开发工作区">
-          <div class="project-body">
-            <h3>个人网站重构</h3>
-            <p>将作品、联系方式和项目说明整合成静态网站，部署到 GitHub Pages，方便长期维护。</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="container about" id="about">
-      <h2>关于我</h2>
-      <p>我喜欢把复杂信息整理成容易理解的结构，也喜欢做一些小工具来解决重复问题。这个网站会作为我的作品入口：以后可以继续加入简历、博客、项目详情页和在线演示。</p>
-    </section>
-
-    <section class="contact-band" id="contact">
-      <div class="container">
-        <div>
-          <h2>欢迎联系</h2>
-          <p>如果你想了解项目细节，或者希望一起做点有意思的东西，可以从这里找到我。</p>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:yourname@example.com">Email</a>
-          <a href="https://github.com/WinnieShan10">GitHub</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container">
-    <p>© 2026 Winnie Shan. Built with GitHub Pages.</p>
-  </footer>
+  <div id="app">加载中...</div>
+  <script>
+    window.$docsify = {
+      name: 'Winniessy',
+      repo: 'Winniessy/Winniessy.github.io',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      auto2top: true,
+      homepage: 'README.md',
+      search: {
+        placeholder: '搜索',
+        noData: '没有找到结果',
+        depth: 3
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
 </body>
 </html>
