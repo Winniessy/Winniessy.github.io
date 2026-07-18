@@ -1,0 +1,105 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Winniessy Website Publisher",
+    "description": "Publish one prepared Markdown article through a GitHub repository dispatch event.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.github.com"
+    }
+  ],
+  "paths": {
+    "/repos/Winniessy/Winniessy.github.io/dispatches": {
+      "post": {
+        "operationId": "publishArticle",
+        "summary": "Publish a prepared Markdown article to the personal website",
+        "description": "Use only after the user explicitly asks to publish the most recent complete Markdown article in the current conversation.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "event_type",
+                  "client_payload"
+                ],
+                "properties": {
+                  "event_type": {
+                    "type": "string",
+                    "enum": [
+                      "publish_article"
+                    ]
+                  },
+                  "client_payload": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "title",
+                      "slug",
+                      "section",
+                      "markdown"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "maxLength": 160,
+                        "description": "Article title without Markdown heading markers."
+                      },
+                      "slug": {
+                        "type": "string",
+                        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+                        "description": "Short lowercase English URL slug without the .md suffix."
+                      },
+                      "section": {
+                        "type": "string",
+                        "enum": [
+                          "linux",
+                          "mcu",
+                          "projects",
+                          "notes"
+                        ]
+                      },
+                      "tags": {
+                        "type": "array",
+                        "maxItems": 5,
+                        "items": {
+                          "type": "string",
+                          "maxLength": 40
+                        }
+                      },
+                      "markdown": {
+                        "type": "string",
+                        "description": "The complete Markdown article copied from the current conversation."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "The article publishing workflow was accepted by GitHub."
+          },
+          "401": {
+            "description": "The GitHub token is missing or invalid."
+          },
+          "403": {
+            "description": "The GitHub token lacks permission to trigger publishing."
+          },
+          "404": {
+            "description": "The repository was not found or is not accessible to the token."
+          },
+          "422": {
+            "description": "GitHub rejected the publishing event payload."
+          }
+        }
+      }
+    }
+  }
+}

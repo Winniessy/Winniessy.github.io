@@ -1,1 +1,58 @@
+name: Publish article from ChatGPT
 
+on:
+  repository_dispatch:
+    types: [publish_article]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: chatgpt-article-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare article
+        id: prepare
+        shell: pwsh
+        run: ./scripts/publish-dispatched-note.ps1
+
+      - name: Commit and push article
+        shell: bash
+        env:
+          ARTICLE_PATH: ${{ steps.prepare.outputs.article_path }}
+          TARGET_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$ARTICLE_PATH" _sidebar.md README.md
+          git commit -m "Publish article from ChatGPT"
+          git push origin "HEAD:$TARGET_BRANCH"
+
+      # Pushes made with GITHUB_TOKEN do not start another workflow, so deploy
+      # the updated site in this workflow after committing the article.
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
