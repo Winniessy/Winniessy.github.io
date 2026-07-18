@@ -9,6 +9,7 @@
   - [路线首页](/mcu/)
   - [嵌入式入门地图](/mcu/embedded-basics.md)
   - [MCU的中断](/notes/mcu.md)
+  - [生产者—消费者模式：MCU 与 Linux 中的典型应用](/mcu/producer-consumer-pattern-mcu-linux.md)
 
 - 项目记录
   - [项目首页](/projects/)

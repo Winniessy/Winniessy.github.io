@@ -83,8 +83,10 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [生产者—消费者模式：MCU 与 Linux 中的典型应用](mcu/producer-consumer-pattern-mcu-linux.md) - MCU - 2026-07-18
 - [MCU的中断](notes/mcu.md) - Note - 2026-07-13
 - [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Note - 2026-07-13
+
 
 <!-- AUTO_NOTES_END -->
 
