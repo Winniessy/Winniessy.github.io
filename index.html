@@ -401,6 +401,172 @@
       margin: 8px 0;
     }
 
+    .article-breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 22px;
+      color: #74807c;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .article-breadcrumb a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .article-breadcrumb span[aria-hidden="true"] {
+      color: #a7b0ad;
+    }
+
+    .article-inline-toc {
+      margin: 26px 0 34px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fbfcfa;
+    }
+
+    .article-inline-toc summary {
+      padding: 13px 16px;
+      color: var(--ink);
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .article-inline-toc ol,
+    .page-toc ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .article-inline-toc ol {
+      padding: 0 16px 14px;
+    }
+
+    .article-inline-toc li,
+    .page-toc li {
+      margin: 7px 0;
+    }
+
+    .article-inline-toc .toc-level-3,
+    .page-toc .toc-level-3 {
+      padding-left: 14px;
+      font-size: 0.9em;
+    }
+
+    .page-toc {
+      position: fixed;
+      z-index: 20;
+      top: 94px;
+      right: 24px;
+      display: none;
+      width: 220px;
+      max-height: calc(100vh - 124px);
+      padding: 16px 18px;
+      overflow: auto;
+      border-left: 2px solid var(--line);
+      color: #52605b;
+      background: rgba(255, 255, 255, 0.94);
+      font-size: 0.88rem;
+    }
+
+    .page-toc strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 0.92rem;
+    }
+
+    .page-toc a,
+    .article-inline-toc a {
+      display: block;
+      color: #5f6b67;
+      font-weight: 600;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+
+    .page-toc a:hover,
+    .article-inline-toc a:hover {
+      color: var(--green);
+    }
+
+    .article-pager {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-pager-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 18px;
+      text-decoration: none;
+    }
+
+    .article-pager-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .article-pager-link,
+    .article-pager-placeholder {
+      min-height: 76px;
+    }
+
+    .article-pager-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fbfcfa;
+      text-decoration: none;
+    }
+
+    .article-pager-link:hover {
+      border-color: rgba(37, 111, 93, 0.42);
+      background: rgba(37, 111, 93, 0.05);
+    }
+
+    .article-pager-link.next {
+      text-align: right;
+    }
+
+    .article-pager-label {
+      margin-bottom: 5px;
+      color: #7a8581;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .article-pager-title {
+      color: var(--ink);
+      font-size: 0.95rem;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    @media (min-width: 1500px) {
+      body.has-page-toc .content {
+        padding-right: 260px;
+      }
+
+      .page-toc {
+        display: block;
+      }
+
+      .article-inline-toc {
+        display: none;
+      }
+    }
+
     @media (max-width: 760px) {
       .markdown-section {
         padding: 28px 18px 64px;
@@ -419,6 +585,18 @@
       .forum-card em {
         grid-column: 2;
         justify-self: start;
+      }
+
+      .article-pager-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-pager-placeholder {
+        display: none;
+      }
+
+      .article-pager-link.next {
+        text-align: left;
       }
     }
     body .content .markdown-section > h1,
@@ -447,7 +625,7 @@
       name: 'Winniessy',
       repo: 'Winniessy/Winniessy.github.io',
       loadSidebar: true,
-      subMaxLevel: 2,
+      subMaxLevel: 0,
       auto2top: true,
       homepage: 'README.md',
       search: {
@@ -457,6 +635,7 @@
       }
     };
   </script>
+  <script src="scripts/site-navigation.js?v=20260718-1"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
 </body>

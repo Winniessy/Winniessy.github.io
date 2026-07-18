@@ -35,11 +35,12 @@ jobs:
         shell: bash
         env:
           ARTICLE_PATH: ${{ steps.prepare.outputs.article_path }}
+          SECTION_INDEX: ${{ steps.prepare.outputs.section_index }}
           TARGET_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- "$ARTICLE_PATH" _sidebar.md README.md
+          git add -- "$ARTICLE_PATH" "$SECTION_INDEX" _sidebar.md README.md
           git commit -m "Publish article from ChatGPT"
           git push origin "HEAD:$TARGET_BRANCH"
 

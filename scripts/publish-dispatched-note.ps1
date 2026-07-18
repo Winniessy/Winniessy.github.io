@@ -91,5 +91,6 @@ try {
 $articlePath = "$section/$slug.md"
 if (-not [string]::IsNullOrWhiteSpace($env:GITHUB_OUTPUT)) {
   Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "article_path=$articlePath" -Encoding utf8
+  Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "section_index=$section/README.md" -Encoding utf8
 }
 Write-Host "Prepared article: $articlePath"

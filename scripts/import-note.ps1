@@ -108,6 +108,54 @@ function Add-ToLatest($ReadmePath, $Section, $Title, $RelativePath) {
   Write-Utf8File $ReadmePath $readme
 }
 
+function Add-ToSectionReadme($SectionReadmePath, $Section, $Title, $RelativePath) {
+  if (-not (Test-Path -LiteralPath $SectionReadmePath)) { return }
+
+  $readme = Read-Utf8File $SectionReadmePath
+  $entry = "- [$Title](/$RelativePath)"
+  if ($readme.Contains($entry)) { return }
+
+  $heading = switch ($Section) {
+    'projects' { '项目列表' }
+    'notes' { '笔记列表' }
+    default { '笔记' }
+  }
+
+  $lines = New-Object System.Collections.Generic.List[string]
+  $lines.AddRange(($readme -split "`r?`n"))
+  $headingIndex = -1
+  for ($i = 0; $i -lt $lines.Count; $i++) {
+    if ($lines[$i].Trim() -eq "## $heading") {
+      $headingIndex = $i
+      break
+    }
+  }
+
+  if ($headingIndex -lt 0) {
+    while ($lines.Count -gt 0 -and $lines[$lines.Count - 1].Trim() -eq '') {
+      $lines.RemoveAt($lines.Count - 1)
+    }
+    $lines.Add('')
+    $lines.Add("## $heading")
+    $lines.Add('')
+    $lines.Add($entry)
+  } else {
+    $insertAt = $headingIndex + 1
+    while ($insertAt -lt $lines.Count -and $lines[$insertAt] -notmatch '^##\s+') {
+      $insertAt++
+    }
+    while ($insertAt -gt ($headingIndex + 1) -and $lines[$insertAt - 1].Trim() -eq '') {
+      $insertAt--
+    }
+    $lines.Insert($insertAt, $entry)
+    if (($insertAt + 1) -lt $lines.Count -and $lines[$insertAt + 1] -match '^##\s+') {
+      $lines.Insert($insertAt + 1, '')
+    }
+  }
+
+  Write-Utf8File $SectionReadmePath (($lines -join "`n").TrimEnd() + "`n")
+}
+
 if (-not $Slug) { $Slug = New-Slug $Title }
 if (-not $Slug.EndsWith('.md')) { $Slug = "$Slug.md" }
 
@@ -143,8 +191,10 @@ Write-Utf8File $targetPath $content
 $relativePath = "$Section/$Slug" -replace '\\', '/'
 Add-ToSidebar (Join-Path $Root '_sidebar.md') $Section $Title $relativePath
 Add-ToLatest (Join-Path $Root 'README.md') $Section $Title $relativePath
+Add-ToSectionReadme (Join-Path $targetDir 'README.md') $Section $Title $relativePath
 
 Write-Host "Imported: $relativePath"
 Write-Host "Updated: _sidebar.md"
 Write-Host "Updated: README.md latest imports"
-Write-Host "Next: git add $relativePath _sidebar.md README.md; git commit -m 'Add note'; git push"
+Write-Host "Updated: $Section/README.md"
+Write-Host "Next: git add $relativePath _sidebar.md README.md $Section/README.md; git commit -m 'Add note'; git push"
