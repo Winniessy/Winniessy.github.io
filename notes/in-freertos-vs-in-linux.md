@@ -1,7 +1,5 @@
 # 系统滴答 in FreeRtos VS in Linux
 
-Date: 2026-07-13  
-
 先澄清一个核心概念差异：
 **FreeRTOS 里的 SysTick 是 Cortex-M 内核自带的专属硬件定时器，是硬件级专有名词；Linux 里没有叫「SysTick」的硬件**，你说的「Linux 的 systick」本质是 Linux 的**系统滴答（Tick）**——功能上和 FreeRTOS 的 SysTick 完全对应，都是给操作系统提供周期性时基，但硬件来源、配置方式、扩展能力差异很大。
 

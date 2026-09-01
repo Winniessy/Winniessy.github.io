@@ -1,6 +1,4 @@
-﻿# 个人网站
-
-日期：2026-07-13  
+# 个人网站
 标签：Docsify / GitHub Pages / Markdown
 
 ## 目标

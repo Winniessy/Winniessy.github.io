@@ -1,6 +1,4 @@
-﻿# Markdown 写作模板
-
-日期：2026-07-13  
+# Markdown 写作模板
 标签：Markdown / 写作 / 模板
 
 ## 标题

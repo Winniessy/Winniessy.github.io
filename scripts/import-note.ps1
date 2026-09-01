@@ -90,9 +90,8 @@ function Add-ToSidebar($SidebarPath, $Section, $Title, $RelativePath) {
 function Add-ToLatest($ReadmePath, $Section, $Title, $RelativePath) {
   Ensure-LatestBlock $ReadmePath
   $readme = Read-Utf8File $ReadmePath
-  $date = Get-Date -Format 'yyyy-MM-dd'
   $label = Get-SectionLabel $Section
-  $entry = "- [$Title]($RelativePath) - $label - $date"
+  $entry = "- [$Title]($RelativePath) - $label"
   if ($readme.Contains($entry)) { return }
 
   $pattern = '(?s)(<!-- AUTO_NOTES_START -->\s*)(.*?)(\s*<!-- AUTO_NOTES_END -->)'
@@ -182,8 +181,7 @@ $tagLine = ''
 if ($Tags.Count -gt 0) { $tagLine = 'Tags: ' + ($Tags -join ' / ') + "`n" }
 
 if ($content -notmatch '^\s*#\s+') {
-  $date = Get-Date -Format 'yyyy-MM-dd'
-  $content = "# $Title`n`nDate: $date  `n$tagLine`n$content`n"
+  $content = "# $Title`n`n$tagLine`n$content`n"
 }
 
 Write-Utf8File $targetPath $content

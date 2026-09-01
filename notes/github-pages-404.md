@@ -1,6 +1,4 @@
-﻿# GitHub Pages 404 排查
-
-日期：2026-07-13  
+# GitHub Pages 404 排查
 标签：GitHub Pages / DNS / SSH / 账号状态
 
 ## 问题
