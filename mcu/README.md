@@ -15,6 +15,7 @@
 - [MCU的中断](/notes/mcu.md)
 - [生产者—消费者模式：MCU 与 Linux 中的典型应用](/mcu/producer-consumer-pattern-mcu-linux.md)
 - [MCU 屏幕 DMA 刷新：双缓冲、Cache、脏区域与 DMA 原理](/mcu/mcu-lcd-dma-refresh.md)
+- [FreeRTOS 任务间通信机制总结](/mcu/freertos-task-communication.md)
 
 ## 下一步
 
