@@ -14,6 +14,9 @@
   - [FreeRTOS 任务间通信机制总结](/mcu/freertos-task-communication.md)
   - [FreeRTOS 资源竞争、临界区与 ISR 中断安全机制](/mcu/freertos-resource-competition-critical-section-isr.md)
 
+- 学习资料 / 官网
+  - [资料首页](/resources/)
+
 - 项目记录
   - [项目首页](/projects/)
   - [个人网站](/projects/personal-site.md)

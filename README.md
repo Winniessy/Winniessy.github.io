@@ -4,7 +4,7 @@
   <div>
     <p class="eyebrow">Welcome to Winniessy</p>
     <h1>整理、归纳学习路线与资料。</h1>
-    <p class="hero-copy">这里像一个小型知识社区：每条学习路线是一个板块，每篇笔记是一条帖子，项目记录则是阶段性成果。</p>
+    <p class="hero-copy">这是Winnie的个人学习Blog，持续更新。相信每天进步一点点，量变会变成质变。</p>
     <div class="hero-actions">
       <a href="#/linux/">进入 Linux 板块</a>
       <a href="#/mcu/">进入 MCU 板块</a>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="stats-row">
-  <div><strong>4</strong><span>学习板块</span></div>
+  <div><strong>5</strong><span>学习板块</span></div>
   <div><strong>8+</strong><span>初始笔记</span></div>
   <div><strong>Docsify</strong><span>Markdown 驱动</span></div>
 </div>
@@ -57,6 +57,14 @@
       <small>网站搭建、工具使用、踩坑复盘。</small>
     </div>
     <em>3 篇</em>
+  </a>
+  <a class="forum-card resources" href="#/resources/">
+    <div class="card-icon">DOC</div>
+    <div>
+      <span>学习资料 / 官网</span>
+      <small>常用源码、官方文档和开发工具的可靠入口。</small>
+    </div>
+    <em>官网</em>
   </a>
 </div>
 
