@@ -12,6 +12,7 @@
 ## 笔记
 
 - [命令行基础](/linux/command-line.md)
+- [系统滴答 in FreeRtos VS in Linux](/notes/in-freertos-vs-in-linux.md)
 
 ## 下一步
 

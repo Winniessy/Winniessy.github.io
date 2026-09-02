@@ -4,6 +4,7 @@
 - Linux 学习之旅
   - [路线首页](/linux/)
   - [命令行基础](/linux/command-line.md)
+  - [系统滴答 in FreeRtos VS in Linux](/notes/in-freertos-vs-in-linux.md)
 
 - MCU 学习之旅
   - [路线首页](/mcu/)
@@ -27,5 +28,3 @@
   - [个人网站搭建记录](/notes/personal-website.md)
   - [Markdown 写作模板](/notes/markdown-template.md)
   - [从飞书导入学习记录](/notes/import-feishu.md)
-  - [系统滴答 in FreeRtos VS in Linux](/notes/in-freertos-vs-in-linux.md)
-  - [MCU的中断](/notes/mcu.md)
