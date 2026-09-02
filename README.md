@@ -32,7 +32,7 @@
       <span>Linux 学习之旅</span>
       <small>命令行、Shell、系统管理、开发环境配置。</small>
     </div>
-    <em>3 篇</em>
+    <em>2 篇</em>
   </a>
   <a class="forum-card mcu" href="#/mcu/">
     <div class="card-icon">IO</div>
@@ -40,7 +40,7 @@
       <span>MCU 学习之旅</span>
       <small>嵌入式基础、外设、调试、硬件实验。</small>
     </div>
-    <em>2 篇</em>
+    <em>4 篇</em>
   </a>
   <a class="forum-card project" href="#/projects/">
     <div class="card-icon">PRJ</div>
@@ -83,11 +83,13 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [FreeRTOS 资源竞争、临界区与 ISR 中断安全机制](mcu/freertos-resource-competition-critical-section-isr.md) - MCU
 - [FreeRTOS 任务间通信机制总结](mcu/freertos-task-communication.md) - MCU
 - [MCU 屏幕 DMA 刷新：双缓冲、Cache、脏区域与 DMA 原理](mcu/mcu-lcd-dma-refresh.md) - MCU
 - [生产者—消费者模式：MCU 与 Linux 中的典型应用](mcu/producer-consumer-pattern-mcu-linux.md) - MCU
 - [MCU的中断](notes/mcu.md) - Note
 - [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Note
+
 <!-- AUTO_NOTES_END -->
 
 ## 学习标签
