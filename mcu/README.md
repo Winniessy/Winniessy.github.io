@@ -17,6 +17,7 @@
 - [MCU 屏幕 DMA 刷新：双缓冲、Cache、脏区域与 DMA 原理](/mcu/mcu-lcd-dma-refresh.md)
 - [FreeRTOS 任务间通信机制总结](/mcu/freertos-task-communication.md)
 - [FreeRTOS 资源竞争、临界区与 ISR 中断安全机制](/mcu/freertos-resource-competition-critical-section-isr.md)
+- [RTOS 中的 Thread Flag 与常见同步机制](/mcu/rtos-thread-flag-sync-mechanisms.md)
 
 ## 下一步
 
