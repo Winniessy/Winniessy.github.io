@@ -1,4 +1,4 @@
-﻿# Linux 学习之旅
+# Linux 学习之旅
 
 这里记录 Linux 的学习路线、常用命令、开发环境配置和排错经验。
 
@@ -13,6 +13,9 @@
 
 - [命令行基础](/linux/command-line.md)
 - [系统滴答 in FreeRtos VS in Linux](/notes/in-freertos-vs-in-linux.md)
+- [Linux 设备模型：字符设备、平台设备、总线与内核子系统](/linux/linux-device-model.md)
+- [Linux Device Tree 与板级资源管理：从 MCU 思维理解 pinctrl、clock 和电源](/linux/linux-device-tree-pinctrl-clock-power.md)
+- [Linux 中断体系：从 MCU 的 NVIC 和 ISR 理解 GIC、irqchip 与上下半部](/linux/linux-interrupt-gic-irqchip.md)
 
 ## 下一步
 

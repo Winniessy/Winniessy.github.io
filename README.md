@@ -32,7 +32,7 @@
       <span>Linux 学习之旅</span>
       <small>命令行、Shell、系统管理、开发环境配置。</small>
     </div>
-    <em>2 篇</em>
+    <em>5 篇</em>
   </a>
   <a class="forum-card mcu" href="#/mcu/">
     <div class="card-icon">IO</div>
@@ -40,7 +40,7 @@
       <span>MCU 学习之旅</span>
       <small>嵌入式基础、外设、调试、硬件实验。</small>
     </div>
-    <em>4 篇</em>
+    <em>9 篇</em>
   </a>
   <a class="forum-card project" href="#/projects/">
     <div class="card-icon">PRJ</div>
@@ -56,7 +56,7 @@
       <span>其他学习笔记</span>
       <small>网站搭建、工具使用、踩坑复盘。</small>
     </div>
-    <em>3 篇</em>
+    <em>4 篇</em>
   </a>
   <a class="forum-card resources" href="#/resources/">
     <div class="card-icon">DOC</div>
@@ -91,6 +91,9 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [Linux 中断体系：从 MCU 的 NVIC 和 ISR 理解 GIC、irqchip 与上下半部](linux/linux-interrupt-gic-irqchip.md) - Linux
+- [Linux Device Tree 与板级资源管理：从 MCU 思维理解 pinctrl、clock 和电源](linux/linux-device-tree-pinctrl-clock-power.md) - Linux
+- [Linux 设备模型：字符设备、平台设备、总线与内核子系统](linux/linux-device-model.md) - Linux
 - [FreeRTOS Message Queue 学习笔记](mcu/freertos-message-queue.md) - MCU
 - [Mutex、Spinlock 与嵌入式并发控制](mcu/mutex-spinlock-embedded-concurrency.md) - MCU
 - [RTOS 中的 Thread Flag 与常见同步机制](mcu/rtos-thread-flag-sync-mechanisms.md) - MCU
@@ -100,6 +103,9 @@
 - [生产者—消费者模式：MCU 与 Linux 中的典型应用](mcu/producer-consumer-pattern-mcu-linux.md) - MCU
 - [MCU的中断](notes/mcu.md) - MCU
 - [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Linux
+
+
+
 
 
 
