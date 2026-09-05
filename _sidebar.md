@@ -16,6 +16,7 @@
   - [FreeRTOS 资源竞争、临界区与 ISR 中断安全机制](/mcu/freertos-resource-competition-critical-section-isr.md)
   - [RTOS 中的 Thread Flag 与常见同步机制](/mcu/rtos-thread-flag-sync-mechanisms.md)
   - [Mutex、Spinlock 与嵌入式并发控制](/mcu/mutex-spinlock-embedded-concurrency.md)
+  - [FreeRTOS Message Queue 学习笔记](/mcu/freertos-message-queue.md)
 
 - 学习资料 / 官网
   - [资料首页](/resources/)

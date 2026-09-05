@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [FreeRTOS Message Queue 学习笔记](mcu/freertos-message-queue.md) - MCU
 - [Mutex、Spinlock 与嵌入式并发控制](mcu/mutex-spinlock-embedded-concurrency.md) - MCU
 - [RTOS 中的 Thread Flag 与常见同步机制](mcu/rtos-thread-flag-sync-mechanisms.md) - MCU
 - [FreeRTOS 资源竞争、临界区与 ISR 中断安全机制](mcu/freertos-resource-competition-critical-section-isr.md) - MCU
@@ -99,6 +100,7 @@
 - [生产者—消费者模式：MCU 与 Linux 中的典型应用](mcu/producer-consumer-pattern-mcu-linux.md) - MCU
 - [MCU的中断](notes/mcu.md) - MCU
 - [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Linux
+
 
 
 
