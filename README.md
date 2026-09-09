@@ -32,7 +32,7 @@
       <span>Linux 学习之旅</span>
       <small>命令行、Shell、系统管理、开发环境配置。</small>
     </div>
-    <em>5 篇</em>
+    <em>6 篇</em>
   </a>
   <a class="forum-card mcu" href="#/mcu/">
     <div class="card-icon">IO</div>
@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [insmod 与 modprobe 学习笔记](linux/insmod-modprobe.md) - Linux
 - [Linux 中断体系：从 MCU 的 NVIC 和 ISR 理解 GIC、irqchip 与上下半部](linux/linux-interrupt-gic-irqchip.md) - Linux
 - [Linux Device Tree 与板级资源管理：从 MCU 思维理解 pinctrl、clock 和电源](linux/linux-device-tree-pinctrl-clock-power.md) - Linux
 - [Linux 设备模型：字符设备、平台设备、总线与内核子系统](linux/linux-device-model.md) - Linux
@@ -103,6 +104,7 @@
 - [生产者—消费者模式：MCU 与 Linux 中的典型应用](mcu/producer-consumer-pattern-mcu-linux.md) - MCU
 - [MCU的中断](notes/mcu.md) - MCU
 - [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Linux
+
 
 
 
