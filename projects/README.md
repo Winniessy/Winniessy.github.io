@@ -6,6 +6,7 @@
 
 - [个人网站](/projects/personal-site.md)
 - [RK3566上机检查](/projects/rk3566-first-boot-check.md)
+- [RK3566 视频编解码与硬件加速环境检查记录](/projects/rk3566-video-codec-acceleration.md)
 
 ## 项目记录模板
 
