@@ -48,7 +48,7 @@
       <span>项目记录</span>
       <small>想法、实现过程、复盘和后续改进。</small>
     </div>
-    <em>1 篇</em>
+    <em>2 篇</em>
   </a>
   <a class="forum-card notes" href="#/notes/">
     <div class="card-icon">MD</div>
@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [RK3566上机检查](projects/rk3566-first-boot-check.md) - Project
 - [insmod 与 modprobe 学习笔记](linux/insmod-modprobe.md) - Linux
 - [Linux 中断体系：从 MCU 的 NVIC 和 ISR 理解 GIC、irqchip 与上下半部](linux/linux-interrupt-gic-irqchip.md) - Linux
 - [Linux Device Tree 与板级资源管理：从 MCU 思维理解 pinctrl、clock 和电源](linux/linux-device-tree-pinctrl-clock-power.md) - Linux
@@ -104,6 +105,7 @@
 - [生产者—消费者模式：MCU 与 Linux 中的典型应用](mcu/producer-consumer-pattern-mcu-linux.md) - MCU
 - [MCU的中断](notes/mcu.md) - MCU
 - [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Linux
+
 
 
 

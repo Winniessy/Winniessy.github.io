@@ -1,10 +1,11 @@
-﻿# 项目记录
+# 项目记录
 
 这里整理做过的项目、实验和阶段性成果。
 
 ## 项目列表
 
 - [个人网站](/projects/personal-site.md)
+- [RK3566上机检查](/projects/rk3566-first-boot-check.md)
 
 ## 项目记录模板
 
