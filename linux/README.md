@@ -17,6 +17,7 @@
 - [Linux Device Tree 与板级资源管理：从 MCU 思维理解 pinctrl、clock 和电源](/linux/linux-device-tree-pinctrl-clock-power.md)
 - [Linux 中断体系：从 MCU 的 NVIC 和 ISR 理解 GIC、irqchip 与上下半部](/linux/linux-interrupt-gic-irqchip.md)
 - [insmod 与 modprobe 学习笔记](/linux/insmod-modprobe.md)
+- [Ubuntu 系统性能监控常用命令](/linux/ubuntu-system-monitoring-commands.md)
 
 ## 下一步
 

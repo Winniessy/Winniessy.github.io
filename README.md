@@ -32,7 +32,7 @@
       <span>Linux 学习之旅</span>
       <small>命令行、Shell、系统管理、开发环境配置。</small>
     </div>
-    <em>6 篇</em>
+    <em>7 篇</em>
   </a>
   <a class="forum-card mcu" href="#/mcu/">
     <div class="card-icon">IO</div>
@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [Ubuntu 系统性能监控常用命令](linux/ubuntu-system-monitoring-commands.md) - Linux
 - [C 语言笔试 / 面试高频知识点整理](notes/c-language-interview-notes.md) - Note
 - [RK3566 视频编解码与硬件加速环境检查记录](projects/rk3566-video-codec-acceleration.md) - Project
 - [RK3566上机检查](projects/rk3566-first-boot-check.md) - Project
