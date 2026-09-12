@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [C 语言笔试 / 面试高频知识点整理](notes/c-language-interview-notes.md) - Note
 - [RK3566 视频编解码与硬件加速环境检查记录](projects/rk3566-video-codec-acceleration.md) - Project
 - [RK3566上机检查](projects/rk3566-first-boot-check.md) - Project
 - [insmod 与 modprobe 学习笔记](linux/insmod-modprobe.md) - Linux
@@ -106,6 +107,7 @@
 - [生产者—消费者模式：MCU 与 Linux 中的典型应用](mcu/producer-consumer-pattern-mcu-linux.md) - MCU
 - [MCU的中断](notes/mcu.md) - MCU
 - [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Linux
+
 
 
 

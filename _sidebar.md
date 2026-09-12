@@ -35,5 +35,5 @@
   - [笔记首页](/notes/)
   - [GitHub Pages 404 排查](/notes/github-pages-404.md)
   - [个人网站搭建记录](/notes/personal-website.md)
-  - [Markdown 写作模板](/notes/markdown-template.md)
   - [从飞书导入学习记录](/notes/import-feishu.md)
+  - [C 语言笔试 / 面试高频知识点整理](/notes/c-language-interview-notes.md)
