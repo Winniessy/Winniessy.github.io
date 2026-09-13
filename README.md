@@ -56,7 +56,7 @@
       <span>其他学习笔记</span>
       <small>网站搭建、工具使用、踩坑复盘。</small>
     </div>
-    <em>4 篇</em>
+    <em>5 篇</em>
   </a>
   <a class="forum-card resources" href="#/resources/">
     <div class="card-icon">DOC</div>
@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [一次 GitHub SSH 推送失败的完整排查记录](notes/github-ssh-push-troubleshooting.md) - Note
 - [MIPI Camera Bring-up 流程与 Sensor probe 框架](projects/mipi-camera-bringup-probe.md) - Project
 - [RK3566 + OV5647 Camera Bring-up 问题排查记录](projects/rk3566-ov5647-bringup-debug.md) - Project
 - [Ubuntu 系统性能监控常用命令](linux/ubuntu-system-monitoring-commands.md) - Linux
