@@ -31,6 +31,8 @@
   - [个人网站](/projects/personal-site.md)
   - [RK3566上机检查](/projects/rk3566-first-boot-check.md)
   - [RK3566 视频编解码与硬件加速环境检查记录](/projects/rk3566-video-codec-acceleration.md)
+  - [RK3566 + OV5647 Camera Bring-up 问题排查记录](/projects/rk3566-ov5647-bringup-debug.md)
+  - [MIPI Camera Bring-up 流程与 Sensor probe 框架](/projects/mipi-camera-bringup-probe.md)
 
 - 其他学习笔记
   - [笔记首页](/notes/)

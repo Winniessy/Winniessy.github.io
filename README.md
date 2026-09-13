@@ -48,7 +48,7 @@
       <span>项目记录</span>
       <small>想法、实现过程、复盘和后续改进。</small>
     </div>
-    <em>3 篇</em>
+    <em>5 篇</em>
   </a>
   <a class="forum-card notes" href="#/notes/">
     <div class="card-icon">MD</div>
@@ -91,6 +91,8 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [MIPI Camera Bring-up 流程与 Sensor probe 框架](projects/mipi-camera-bringup-probe.md) - Project
+- [RK3566 + OV5647 Camera Bring-up 问题排查记录](projects/rk3566-ov5647-bringup-debug.md) - Project
 - [Ubuntu 系统性能监控常用命令](linux/ubuntu-system-monitoring-commands.md) - Linux
 - [C 语言笔试 / 面试高频知识点整理](notes/c-language-interview-notes.md) - Note
 - [RK3566 视频编解码与硬件加速环境检查记录](projects/rk3566-video-codec-acceleration.md) - Project
