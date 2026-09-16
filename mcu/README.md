@@ -20,6 +20,7 @@
 - [RTOS 中的 Thread Flag 与常见同步机制](/mcu/rtos-thread-flag-sync-mechanisms.md)
 - [Mutex、Spinlock 与嵌入式并发控制](/mcu/mutex-spinlock-embedded-concurrency.md)
 - [FreeRTOS Message Queue 学习笔记](/mcu/freertos-message-queue.md)
+- [UART、I2C、SPI 与 SPI 菊花链通信总结](/mcu/uart-i2c-spi-debugging.md)
 
 ## 下一步
 
