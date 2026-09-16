@@ -32,7 +32,7 @@
       <span>Linux 学习之旅</span>
       <small>命令行、Shell、系统管理、开发环境配置。</small>
     </div>
-    <em>8 篇</em>
+    <em>9 篇</em>
   </a>
   <a class="forum-card mcu" href="#/mcu/">
     <div class="card-icon">IO</div>
@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [Linux 虚拟内存、mmap 与 Camera DMA 零拷贝链路](linux/linux-virtual-memory-mmap-camera-dma.md) - Linux
 - [Linux 软中断、tasklet、workqueue 与 threaded IRQ](linux/linux-softirq-tasklet-workqueue.md) - Linux
 - [一次 GitHub SSH 推送失败的完整排查记录](notes/github-ssh-push-troubleshooting.md) - Note
 - [MIPI Camera Bring-up 流程与 Sensor probe 框架](projects/mipi-camera-bringup-probe.md) - Project

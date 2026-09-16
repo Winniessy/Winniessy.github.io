@@ -19,6 +19,7 @@
 - [insmod 与 modprobe 学习笔记](/linux/insmod-modprobe.md)
 - [Ubuntu 系统性能监控常用命令](/linux/ubuntu-system-monitoring-commands.md)
 - [Linux 软中断、tasklet、workqueue 与 threaded IRQ](/linux/linux-softirq-tasklet-workqueue.md)
+- [Linux 虚拟内存、mmap 与 Camera DMA 零拷贝链路](/linux/linux-virtual-memory-mmap-camera-dma.md)
 
 ## 下一步
 
