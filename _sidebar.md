@@ -10,6 +10,7 @@
   - [Linux 中断体系：从 MCU 的 NVIC 和 ISR 理解 GIC、irqchip 与上下半部](/linux/linux-interrupt-gic-irqchip.md)
   - [insmod 与 modprobe 学习笔记](/linux/insmod-modprobe.md)
   - [Ubuntu 系统性能监控常用命令](/linux/ubuntu-system-monitoring-commands.md)
+  - [Linux 软中断、tasklet、workqueue 与 threaded IRQ](/linux/linux-softirq-tasklet-workqueue.md)
 
 - MCU 学习之旅
   - [路线首页](/mcu/)
