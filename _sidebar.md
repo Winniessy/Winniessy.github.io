@@ -25,6 +25,7 @@
   - [Mutex、Spinlock 与嵌入式并发控制](/mcu/mutex-spinlock-embedded-concurrency.md)
   - [FreeRTOS Message Queue 学习笔记](/mcu/freertos-message-queue.md)
   - [UART、I2C、SPI 与 SPI 菊花链通信总结](/mcu/uart-i2c-spi-debugging.md)
+  - [Cortex-M 中的 SVC 与 PendSV](/mcu/cortex-m-svc-and-pendsv.md)
 
 - 学习资料 / 官网
   - [资料首页](/resources/)
