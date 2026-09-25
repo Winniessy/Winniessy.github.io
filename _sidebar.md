@@ -27,6 +27,7 @@
   - [UART、I2C、SPI 与 SPI 菊花链通信总结](/mcu/uart-i2c-spi-debugging.md)
   - [Cortex-M 中的 SVC 与 PendSV](/mcu/cortex-m-svc-and-pendsv.md)
   - [Cortex-M 异常与中断的区别](/mcu/cortex-m-exceptions-vs-interrupts.md)
+  - [Cortex-M 中断向量表：从启动文件到 VTOR 重定位](/mcu/cortex-m-vector-table.md)
 
 - 学习资料 / 官网
   - [资料首页](/resources/)
