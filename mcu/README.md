@@ -22,6 +22,7 @@
 - [FreeRTOS Message Queue 学习笔记](/mcu/freertos-message-queue.md)
 - [UART、I2C、SPI 与 SPI 菊花链通信总结](/mcu/uart-i2c-spi-debugging.md)
 - [Cortex-M 中的 SVC 与 PendSV](/mcu/cortex-m-svc-and-pendsv.md)
+- [Cortex-M 异常与中断的区别](/mcu/cortex-m-exceptions-vs-interrupts.md)
 
 ## 下一步
 
