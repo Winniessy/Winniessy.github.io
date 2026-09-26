@@ -24,6 +24,7 @@
 - [Cortex-M 中的 SVC 与 PendSV](/mcu/cortex-m-svc-and-pendsv.md)
 - [Cortex-M 异常与中断的区别](/mcu/cortex-m-exceptions-vs-interrupts.md)
 - [Cortex-M 中断向量表：从启动文件到 VTOR 重定位](/mcu/cortex-m-vector-table.md)
+- [幂等、可重入与线程安全](/mcu/idempotent-reentrant-thread-safe.md)
 
 ## 下一步
 

@@ -40,7 +40,7 @@
       <span>MCU 学习之旅</span>
       <small>嵌入式基础、外设、调试、硬件实验。</small>
     </div>
-    <em>13 篇</em>
+    <em>14 篇</em>
   </a>
   <a class="forum-card project" href="#/projects/">
     <div class="card-icon">PRJ</div>
@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [幂等、可重入与线程安全](mcu/idempotent-reentrant-thread-safe.md) - MCU
 - [Cortex-M 中断向量表：从启动文件到 VTOR 重定位](mcu/cortex-m-vector-table.md) - MCU
 - [Cortex-M 异常与中断的区别](mcu/cortex-m-exceptions-vs-interrupts.md) - MCU
 - [Cortex-M 中的 SVC 与 PendSV](mcu/cortex-m-svc-and-pendsv.md) - MCU
