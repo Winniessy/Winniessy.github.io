@@ -56,7 +56,7 @@
       <span>其他学习笔记</span>
       <small>网站搭建、工具使用、踩坑复盘。</small>
     </div>
-    <em>5 篇</em>
+    <em>6 篇</em>
   </a>
   <a class="forum-card resources" href="#/resources/">
     <div class="card-icon">DOC</div>
@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [C++ 基础：数组、std::array、std::vector 与 size_t](notes/cpp-arrays-vectors-size-t.md) - Note
 - [幂等、可重入与线程安全](mcu/idempotent-reentrant-thread-safe.md) - MCU
 - [Cortex-M 中断向量表：从启动文件到 VTOR 重定位](mcu/cortex-m-vector-table.md) - MCU
 - [Cortex-M 异常与中断的区别](mcu/cortex-m-exceptions-vs-interrupts.md) - MCU

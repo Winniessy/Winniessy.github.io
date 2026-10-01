@@ -48,3 +48,4 @@
   - [从飞书导入学习记录](/notes/import-feishu.md)
   - [C 语言笔试 / 面试高频知识点整理](/notes/c-language-interview-notes.md)
   - [一次 GitHub SSH 推送失败的完整排查记录](/notes/github-ssh-push-troubleshooting.md)
+  - [C++ 基础：数组、std::array、std::vector 与 size_t](/notes/cpp-arrays-vectors-size-t.md)
