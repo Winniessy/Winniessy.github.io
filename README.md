@@ -2,28 +2,28 @@
 
 <div class="home-hero">
   <div>
-    <p class="eyebrow">Welcome to Winniessy</p>
-    <h1>整理、归纳学习路线与资料。</h1>
-    <p class="hero-copy">这是Winnie的个人学习Blog，持续更新。相信每天进步一点点，量变会变成质变。</p>
+    <p class="eyebrow">WINNIE · EMBEDDED LEARNING NOTES</p>
+    <h1>记录嵌入式开发的学习与实践。</h1>
+    <p class="hero-copy">这是 Winnie 的个人学习 Blog，围绕 MCU、FreeRTOS、Linux 驱动和 Camera 开发，持续记录问题、验证过程与阶段性结论。</p>
     <div class="hero-actions">
-      <a href="#/linux/">进入 Linux 板块</a>
-      <a href="#/mcu/">进入 MCU 板块</a>
+      <a href="#/linux/">浏览 Linux 笔记</a>
+      <a href="#/mcu/">浏览 MCU 笔记</a>
     </div>
   </div>
   <div class="hero-panel">
-    <span>今日状态</span>
-    <strong>持续更新中</strong>
-    <small>先记录，再优化；先跑通，再做漂亮。</small>
+    <span>目前关注</span>
+    <strong>Linux &amp; MCU</strong>
+    <small>从基础概念到真实项目，把遇到的问题整理成可以回看的记录。</small>
   </div>
 </div>
 
 <div class="stats-row">
-  <div><strong>5</strong><span>学习板块</span></div>
-  <div><strong>8+</strong><span>初始笔记</span></div>
-  <div><strong>Docsify</strong><span>Markdown 驱动</span></div>
+  <div class="stat-notes"><strong>34</strong><span>篇公开记录</span><small>Linux、MCU、项目与工具笔记</small></div>
+  <div class="stat-topics"><strong>4</strong><span>个学习方向</span><small>持续补充技术路线和实践复盘</small></div>
+  <div class="stat-stack"><strong>Docsify</strong><span>Markdown + GitHub Pages</span><small>轻量、可维护、持续更新</small></div>
 </div>
 
-## 学习板块
+## 内容导航
 
 <div class="forum-grid">
   <a class="forum-card linux" href="#/linux/">
