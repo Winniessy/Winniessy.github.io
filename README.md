@@ -3,7 +3,7 @@
 <div class="home-hero">
   <div>
     <p class="eyebrow">WINNIE · EMBEDDED LEARNING NOTES</p>
-    <h1>记录嵌入式开发的学习&amp;实践。</h1>
+    <h1>记录Winnie开发的学习&amp;实践。</h1>
     <p class="hero-copy">持续更新中，相信量变会达到质变。</p>
     <div class="hero-actions">
       <a href="#/linux/">浏览 Linux 笔记</a>
