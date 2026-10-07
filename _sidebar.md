@@ -12,6 +12,7 @@
   - [Ubuntu 系统性能监控常用命令](/linux/ubuntu-system-monitoring-commands.md)
   - [Linux 软中断、tasklet、workqueue 与 threaded IRQ](/linux/linux-softirq-tasklet-workqueue.md)
   - [Linux 虚拟内存、mmap 与 Camera DMA 零拷贝链路](/linux/linux-virtual-memory-mmap-camera-dma.md)
+  - [Linux 系统调用框架：从 syscall 到内核子系统](/linux/linux-system-call-framework.md)
 
 - MCU 学习之旅
   - [路线首页](/mcu/)

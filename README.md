@@ -32,7 +32,7 @@
       <span>Linux 学习之旅</span>
       <small>命令行、Shell、系统管理、开发环境配置。</small>
     </div>
-    <em>9 篇</em>
+    <em>10 篇</em>
   </a>
   <a class="forum-card mcu" href="#/mcu/">
     <div class="card-icon">IO</div>
@@ -91,6 +91,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [Linux 系统调用框架：从 syscall 到内核子系统](linux/linux-system-call-framework.md) - Linux
 - [C++ 基础：数组、std::array、std::vector 与 size_t](notes/cpp-arrays-vectors-size-t.md) - Note
 - [幂等、可重入与线程安全](mcu/idempotent-reentrant-thread-safe.md) - MCU
 - [Cortex-M 中断向量表：从启动文件到 VTOR 重定位](mcu/cortex-m-vector-table.md) - MCU
