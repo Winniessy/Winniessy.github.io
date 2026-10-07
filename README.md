@@ -3,8 +3,8 @@
 <div class="home-hero">
   <div>
     <p class="eyebrow">WINNIE · EMBEDDED LEARNING NOTES</p>
-    <h1>记录嵌入式开发的学习与实践。</h1>
-    <p class="hero-copy">这是 Winnie 的个人学习 Blog，围绕 MCU、FreeRTOS、Linux 驱动和 Camera 开发，持续记录问题、验证过程与阶段性结论。</p>
+    <h1>记录嵌入式开发的学习&amp;实践。</h1>
+    <p class="hero-copy">持续更新中，相信量变会达到质变。</p>
     <div class="hero-actions">
       <a href="#/linux/">浏览 Linux 笔记</a>
       <a href="#/mcu/">浏览 MCU 笔记</a>
