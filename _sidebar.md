@@ -32,6 +32,9 @@
   - [Cortex-M 中断向量表：从启动文件到 VTOR 重定位](/mcu/cortex-m-vector-table.md)
   - [幂等、可重入与线程安全](/mcu/idempotent-reentrant-thread-safe.md)
 
+- AI 学习之旅
+  - [路线首页](/ai/)
+
 - 学习资料 / 官网
   - [资料首页](/resources/)
 
@@ -48,6 +51,4 @@
   - [GitHub Pages 404 排查](/notes/github-pages-404.md)
   - [个人网站搭建记录](/notes/personal-website.md)
   - [从飞书导入学习记录](/notes/import-feishu.md)
-  - [C 语言笔试 / 面试高频知识点整理](/notes/c-language-interview-notes.md)
   - [一次 GitHub SSH 推送失败的完整排查记录](/notes/github-ssh-push-troubleshooting.md)
-  - [C++ 基础：数组、std::array、std::vector 与 size_t](/notes/cpp-arrays-vectors-size-t.md)

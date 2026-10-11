@@ -12,14 +12,14 @@
   </div>
   <div class="hero-panel">
     <span>目前关注</span>
-    <strong>Linux &amp; MCU</strong>
+    <strong>Linux &amp; MCU &amp; AI</strong>
     <small>从基础概念到真实项目，把遇到的问题整理成可以回看的记录。</small>
   </div>
 </div>
 
 <div class="stats-row">
-  <div class="stat-notes"><strong>34</strong><span>篇公开记录</span><small>Linux、MCU、项目与工具笔记</small></div>
-  <div class="stat-topics"><strong>4</strong><span>个学习方向</span><small>持续补充技术路线和实践复盘</small></div>
+  <div class="stat-notes"><strong>32</strong><span>篇公开记录</span><small>Linux、MCU、项目与工具笔记</small></div>
+  <div class="stat-topics"><strong>5</strong><span>个学习方向</span><small>持续补充技术路线和实践复盘</small></div>
   <div class="stat-stack"><strong>Docsify</strong><span>Markdown + GitHub Pages</span><small>轻量、可维护、持续更新</small></div>
 </div>
 
@@ -42,6 +42,14 @@
     </div>
     <em>14 篇</em>
   </a>
+  <a class="forum-card ai" href="#/ai/">
+    <div class="card-icon">AI</div>
+    <div>
+      <span>AI 学习之旅</span>
+      <small>模型原理、工具实践和 AI 辅助开发。</small>
+    </div>
+    <em>新板块</em>
+  </a>
   <a class="forum-card project" href="#/projects/">
     <div class="card-icon">PRJ</div>
     <div>
@@ -56,7 +64,7 @@
       <span>其他学习笔记</span>
       <small>网站搭建、工具使用、踩坑复盘。</small>
     </div>
-    <em>6 篇</em>
+    <em>4 篇</em>
   </a>
   <a class="forum-card resources" href="#/resources/">
     <div class="card-icon">DOC</div>
@@ -93,7 +101,6 @@
 <!-- AUTO_NOTES_START -->
 - [Linux DMA 与 DMA-BUF：从 Camera 到 VPU 的共享 buffer](linux/linux-dma-dma-buf.md) - Linux
 - [Linux 系统调用框架：从 syscall 到内核子系统](linux/linux-system-call-framework.md) - Linux
-- [C++ 基础：数组、std::array、std::vector 与 size_t](notes/cpp-arrays-vectors-size-t.md) - Note
 - [幂等、可重入与线程安全](mcu/idempotent-reentrant-thread-safe.md) - MCU
 - [Cortex-M 中断向量表：从启动文件到 VTOR 重定位](mcu/cortex-m-vector-table.md) - MCU
 - [Cortex-M 异常与中断的区别](mcu/cortex-m-exceptions-vs-interrupts.md) - MCU
@@ -105,7 +112,6 @@
 - [MIPI Camera Bring-up 流程与 Sensor probe 框架](projects/mipi-camera-bringup-probe.md) - Project
 - [RK3566 + OV5647 Camera Bring-up 问题排查记录](projects/rk3566-ov5647-bringup-debug.md) - Project
 - [Ubuntu 系统性能监控常用命令](linux/ubuntu-system-monitoring-commands.md) - Linux
-- [C 语言笔试 / 面试高频知识点整理](notes/c-language-interview-notes.md) - Note
 - [RK3566 视频编解码与硬件加速环境检查记录](projects/rk3566-video-codec-acceleration.md) - Project
 - [RK3566上机检查](projects/rk3566-first-boot-check.md) - Project
 - [insmod 与 modprobe 学习笔记](linux/insmod-modprobe.md) - Linux
