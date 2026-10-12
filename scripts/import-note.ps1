@@ -1,5 +1,5 @@
 param(
-  [ValidateSet('linux', 'mcu', 'projects', 'notes')]
+  [ValidateSet('linux', 'mcu', 'ai', 'projects', 'notes')]
   [string]$Section = 'notes',
 
   [Parameter(Mandatory = $true)]
@@ -37,9 +37,92 @@ function Get-SectionLabel($Section) {
   switch ($Section) {
     'linux' { return 'Linux' }
     'mcu' { return 'MCU' }
+    'ai' { return 'AI' }
     'projects' { return 'Project' }
     default { return 'Note' }
   }
+}
+
+function Get-SectionHeading($Section) {
+  switch ($Section) {
+    'linux' { return 'Linux 学习之旅' }
+    'mcu' { return 'MCU 学习之旅' }
+    'ai' { return 'AI 学习之旅' }
+    'projects' { return '项目记录' }
+    default { return '其他学习笔记' }
+  }
+}
+
+function Get-LatestEntries($Readme) {
+  $match = [regex]::Match($Readme, '(?s)<!-- AUTO_NOTES_START -->\s*(.*?)\s*<!-- AUTO_NOTES_END -->')
+  if (-not $match.Success) { return @() }
+
+  return @(
+    ($match.Groups[1].Value -split "`r?`n") |
+      Where-Object { $_ -match '^\s*- \[.+\]\(.+\) - .+$' } |
+      Select-Object -First 3
+  )
+}
+
+function Get-LatestDescription($Section) {
+  switch ($Section) {
+    'linux' { return '最近整理的 Linux 学习与实践记录。' }
+    'mcu' { return '最近整理的 MCU 与嵌入式实践记录。' }
+    'ai' { return '最近整理的 AI 工具与模型实践记录。' }
+    'projects' { return '最近整理的项目实现与问题排查记录。' }
+    default { return '最近整理的学习与工具使用记录。' }
+  }
+}
+
+function Get-LatestCardsHtml($Entries) {
+  $cards = New-Object System.Collections.Generic.List[string]
+
+  foreach ($entry in $Entries) {
+    if ($entry -notmatch '^\s*- \[(.+)\]\(([^)]+)\) - (.+)$') { continue }
+
+    $title = [System.Net.WebUtility]::HtmlEncode($matches[1])
+    $path = $matches[2].TrimStart('/')
+    $href = '#/' + $path
+    $section = $matches[3]
+    $sectionKey = switch ($section) {
+      'Project' { 'projects' }
+      'Note' { 'notes' }
+      default { $section.ToLowerInvariant() }
+    }
+    $badgeText = switch ($section) {
+      'Project' { '项目' }
+      'Note' { '笔记' }
+      default { $section }
+    }
+    $badgeClass = if ($section -eq 'Linux') { 'blue' } else { 'green' }
+    $description = Get-LatestDescription $sectionKey
+
+    $cards.Add(('  <a class="topic-item" href="{0}">' -f $href))
+    $cards.Add(('    <span class="badge {0}">{1}</span>' -f $badgeClass, [System.Net.WebUtility]::HtmlEncode($badgeText)))
+    $cards.Add(('    <strong>{0}</strong>' -f $title))
+    $cards.Add(('    <small>{0}</small>' -f $description))
+    $cards.Add('  </a>')
+  }
+
+  return @(
+    '<div class="topic-list">'
+    $cards
+    '</div>'
+  ) -join "`n"
+}
+
+function Update-LatestCards($ReadmePath) {
+  $readme = Read-Utf8File $ReadmePath
+  if ($readme -notmatch '<!-- LATEST_NOTES_START -->') { return }
+
+  $entries = Get-LatestEntries $readme
+  $cards = Get-LatestCardsHtml $entries
+  $pattern = '(?s)(<!-- LATEST_NOTES_START -->\s*).*?(\s*<!-- LATEST_NOTES_END -->)'
+  $readme = [regex]::Replace($readme, $pattern, {
+    param($m)
+    return $m.Groups[1].Value + $cards + $m.Groups[2].Value
+  }, 1)
+  Write-Utf8File $ReadmePath $readme
 }
 
 function Ensure-LatestBlock($ReadmePath) {
@@ -61,6 +144,7 @@ function Add-ToSidebar($SidebarPath, $Section, $Title, $RelativePath) {
   if ($sidebar.Contains($entry)) { return }
 
   $homeLinkPattern = "\(/$Section/\)"
+  $sectionHeading = Get-SectionHeading $Section
   $lines = New-Object System.Collections.Generic.List[string]
   $lines.AddRange(($sidebar -split "`r?`n"))
 
@@ -73,8 +157,17 @@ function Add-ToSidebar($SidebarPath, $Section, $Title, $RelativePath) {
   }
 
   if ($homeIndex -lt 0) {
+    for ($i = 0; $i -lt $lines.Count; $i++) {
+      if ($lines[$i].Trim() -eq "- $sectionHeading") {
+        $homeIndex = $i
+        break
+      }
+    }
+  }
+
+  if ($homeIndex -lt 0) {
     if ($lines.Count -gt 0 -and $lines[$lines.Count - 1].Trim() -ne '') { $lines.Add('') }
-    $lines.Add("- $Section")
+    $lines.Add("- $sectionHeading")
     $lines.Add($entry)
   } else {
     $insertAt = $homeIndex + 1
@@ -105,6 +198,7 @@ function Add-ToLatest($ReadmePath, $Section, $Title, $RelativePath) {
   })
 
   Write-Utf8File $ReadmePath $readme
+  Update-LatestCards $ReadmePath
 }
 
 function Add-ToSectionReadme($SectionReadmePath, $Section, $Title, $RelativePath) {

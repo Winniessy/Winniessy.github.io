@@ -76,27 +76,29 @@
   </a>
 </div>
 
-## 笔记
+## 最新笔记
 
+<!-- LATEST_NOTES_START -->
 <div class="topic-list">
-  <a class="topic-item pinned" href="#/notes/github-pages-404.md">
-    <span class="badge">置顶</span>
-    <strong>GitHub Pages 404 排查记录</strong>
-    <small>从本地正常、线上 404、DNS、SSH 到账号状态的完整排查。</small>
+  <a class="topic-item" href="#/ai/ollama-model-porting.md">
+    <span class="badge green">AI</span>
+    <strong>Ollama 模型移植与本地部署记录</strong>
+    <small>最近整理的 AI 工具与模型实践记录。</small>
   </a>
-  <a class="topic-item" href="#/projects/personal-site.md">
-    <span class="badge green">项目</span>
-    <strong>个人网站搭建记录</strong>
-    <small>用 Docsify 把 Markdown 变成可维护的个人学习站。</small>
-  </a>
-  <a class="topic-item" href="#/linux/command-line.md">
+  <a class="topic-item" href="#/linux/linux-dma-dma-buf.md">
     <span class="badge blue">Linux</span>
-    <strong>命令行基础</strong>
-    <small>记录每天真正用到的命令，再逐步补充场景。</small>
+    <strong>Linux DMA 与 DMA-BUF：从 Camera 到 VPU 的共享 buffer</strong>
+    <small>最近整理的 Linux 学习与实践记录。</small>
+  </a>
+  <a class="topic-item" href="#/linux/linux-system-call-framework.md">
+    <span class="badge blue">Linux</span>
+    <strong>Linux 系统调用框架：从 syscall 到内核子系统</strong>
+    <small>最近整理的 Linux 学习与实践记录。</small>
   </a>
 </div>
+<!-- LATEST_NOTES_END -->
 
-## 最新收录
+## 全部收录
 
 <!-- AUTO_NOTES_START -->
 - [Ollama 模型移植与本地部署记录](ai/ollama-model-porting.md) - AI
