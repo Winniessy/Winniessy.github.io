@@ -30,6 +30,7 @@
   - [幂等、可重入与线程安全](/mcu/idempotent-reentrant-thread-safe.md)
 
 - AI 学习之旅
+  - [Ollama 模型移植与本地部署记录](/ai/ollama-model-porting.md)
 
 - 学习资料 / 官网
   - [资料首页](/resources/)

@@ -18,7 +18,7 @@
 </div>
 
 <div class="stats-row">
-  <div class="stat-notes"><strong>32</strong><span>篇公开记录</span><small>Linux、MCU、项目与工具笔记</small></div>
+  <div class="stat-notes"><strong>33</strong><span>篇公开记录</span><small>Linux、MCU、项目与工具笔记</small></div>
   <div class="stat-topics"><strong>5</strong><span>个学习方向</span><small>持续补充技术路线和实践复盘</small></div>
   <div class="stat-stack"><strong>Docsify</strong><span>Markdown + GitHub Pages</span><small>轻量、可维护、持续更新</small></div>
 </div>
@@ -48,7 +48,7 @@
       <span>AI 学习之旅</span>
       <small>模型原理、工具实践和 AI 辅助开发。</small>
     </div>
-    <em>新板块</em>
+    <em>1 篇</em>
   </a>
   <a class="forum-card project" href="#/projects/">
     <div class="card-icon">PRJ</div>
@@ -99,6 +99,7 @@
 ## 最新收录
 
 <!-- AUTO_NOTES_START -->
+- [Ollama 模型移植与本地部署记录](ai/ollama-model-porting.md) - AI
 - [Linux DMA 与 DMA-BUF：从 Camera 到 VPU 的共享 buffer](linux/linux-dma-dma-buf.md) - Linux
 - [Linux 系统调用框架：从 syscall 到内核子系统](linux/linux-system-call-framework.md) - Linux
 - [幂等、可重入与线程安全](mcu/idempotent-reentrant-thread-safe.md) - MCU
