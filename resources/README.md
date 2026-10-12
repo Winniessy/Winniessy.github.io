@@ -16,6 +16,7 @@
 
 - [FreeRTOS](https://www.freertos.org/)：FreeRTOS 官网、文档和入门资料。
 - [FreeRTOS Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel)：FreeRTOS 内核源码仓库。
+- [Arm CPU / Processor IP](https://www.arm.com/products/silicon-ip-cpu/)：Arm Cortex-A、Cortex-M、Cortex-R 等 CPU 产品和处理器 IP。
 - [Arm Developer](https://developer.arm.com/)：Arm 架构、Cortex-M 和开发工具资料。
 - [CMSIS](https://github.com/ARM-software/CMSIS_5)：Arm 官方 CMSIS 源码仓库。
 - [STM32Cube MCU & MPU Packages](https://www.st.com/en/embedded-software/stm32cube-mcu-mpu-packages.html)：ST 官方 STM32Cube 软件包入口。
