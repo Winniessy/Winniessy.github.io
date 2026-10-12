@@ -53,14 +53,14 @@ function Get-SectionHeading($Section) {
   }
 }
 
-function Get-LatestEntries($Readme) {
+function Get-LatestEntries($Readme, [int]$Limit = 10) {
   $match = [regex]::Match($Readme, '(?s)<!-- AUTO_NOTES_START -->\s*(.*?)\s*<!-- AUTO_NOTES_END -->')
   if (-not $match.Success) { return @() }
 
   return @(
     ($match.Groups[1].Value -split "`r?`n") |
       Where-Object { $_ -match '^\s*- \[.+\]\(.+\) - .+$' } |
-      Select-Object -First 3
+      Select-Object -First $Limit
   )
 }
 
@@ -115,7 +115,7 @@ function Update-LatestCards($ReadmePath) {
   $readme = Read-Utf8File $ReadmePath
   if ($readme -notmatch '<!-- LATEST_NOTES_START -->') { return }
 
-  $entries = Get-LatestEntries $readme
+  $entries = Get-LatestEntries $readme 3
   $cards = Get-LatestCardsHtml $entries
   $pattern = '(?s)(<!-- LATEST_NOTES_START -->\s*).*?(\s*<!-- LATEST_NOTES_END -->)'
   $readme = [regex]::Replace($readme, $pattern, {
@@ -185,7 +185,11 @@ function Add-ToLatest($ReadmePath, $Section, $Title, $RelativePath) {
   $readme = Read-Utf8File $ReadmePath
   $label = Get-SectionLabel $Section
   $entry = "- [$Title]($RelativePath) - $label"
-  if ($readme.Contains($entry)) { return }
+  $entries = Get-LatestEntries $readme 10
+  if ($entries -contains $entry) {
+    Update-LatestCards $ReadmePath
+    return
+  }
 
   $pattern = '(?s)(<!-- AUTO_NOTES_START -->\s*)(.*?)(\s*<!-- AUTO_NOTES_END -->)'
   $readme = [regex]::Replace($readme, $pattern, {
@@ -196,6 +200,12 @@ function Add-ToLatest($ReadmePath, $Section, $Title, $RelativePath) {
     }
     return $m.Groups[1].Value + $entry + "`n" + $existing + "`n" + $m.Groups[3].Value
   })
+
+  $entries = Get-LatestEntries $readme 10
+  $readme = [regex]::Replace($readme, $pattern, {
+    param($m)
+    return $m.Groups[1].Value + (($entries -join "`n")) + $m.Groups[3].Value
+  }, 1)
 
   Write-Utf8File $ReadmePath $readme
   Update-LatestCards $ReadmePath

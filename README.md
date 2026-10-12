@@ -98,9 +98,7 @@
 </div>
 <!-- LATEST_NOTES_END -->
 
-<div hidden>
-
-## 全部收录
+## 更多笔记
 
 <!-- AUTO_NOTES_START -->
 - [Ollama 模型移植与本地部署记录](ai/ollama-model-porting.md) - AI
@@ -113,25 +111,6 @@
 - [UART、I2C、SPI 与 SPI 菊花链通信总结](mcu/uart-i2c-spi-debugging.md) - MCU
 - [Linux 虚拟内存、mmap 与 Camera DMA 零拷贝链路](linux/linux-virtual-memory-mmap-camera-dma.md) - Linux
 - [Linux 软中断、tasklet、workqueue 与 threaded IRQ](linux/linux-softirq-tasklet-workqueue.md) - Linux
-- [一次 GitHub SSH 推送失败的完整排查记录](notes/github-ssh-push-troubleshooting.md) - Note
-- [MIPI Camera Bring-up 流程与 Sensor probe 框架](projects/mipi-camera-bringup-probe.md) - Project
-- [RK3566 + OV5647 Camera Bring-up 问题排查记录](projects/rk3566-ov5647-bringup-debug.md) - Project
-- [Ubuntu 系统性能监控常用命令](linux/ubuntu-system-monitoring-commands.md) - Linux
-- [RK3566 视频编解码与硬件加速环境检查记录](projects/rk3566-video-codec-acceleration.md) - Project
-- [RK3566上机检查](projects/rk3566-first-boot-check.md) - Project
-- [insmod 与 modprobe 学习笔记](linux/insmod-modprobe.md) - Linux
-- [Linux 中断体系：从 MCU 的 NVIC 和 ISR 理解 GIC、irqchip 与上下半部](linux/linux-interrupt-gic-irqchip.md) - Linux
-- [Linux Device Tree 与板级资源管理：从 MCU 思维理解 pinctrl、clock 和电源](linux/linux-device-tree-pinctrl-clock-power.md) - Linux
-- [Linux 设备模型：字符设备、平台设备、总线与内核子系统](linux/linux-device-model.md) - Linux
-- [FreeRTOS Message Queue 学习笔记](mcu/freertos-message-queue.md) - MCU
-- [Mutex、Spinlock 与嵌入式并发控制](mcu/mutex-spinlock-embedded-concurrency.md) - MCU
-- [RTOS 中的 Thread Flag 与常见同步机制](mcu/rtos-thread-flag-sync-mechanisms.md) - MCU
-- [FreeRTOS 资源竞争、临界区与 ISR 中断安全机制](mcu/freertos-resource-competition-critical-section-isr.md) - MCU
-- [FreeRTOS 任务间通信机制总结](mcu/freertos-task-communication.md) - MCU
-- [MCU 屏幕 DMA 刷新：双缓冲、Cache、脏区域与 DMA 原理](mcu/mcu-lcd-dma-refresh.md) - MCU
-- [生产者—消费者模式：MCU 与 Linux 中的典型应用](mcu/producer-consumer-pattern-mcu-linux.md) - MCU
-- [MCU的中断](notes/mcu.md) - MCU
-- [系统滴答 in FreeRtos VS in Linux](notes/in-freertos-vs-in-linux.md) - Linux
 
 
 
@@ -144,8 +123,6 @@
 
 
 <!-- AUTO_NOTES_END -->
-
-</div>
 
 ## 学习标签
 
