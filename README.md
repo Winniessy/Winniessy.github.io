@@ -98,6 +98,8 @@
 </div>
 <!-- LATEST_NOTES_END -->
 
+<div hidden>
+
 ## 全部收录
 
 <!-- AUTO_NOTES_START -->
@@ -142,6 +144,8 @@
 
 
 <!-- AUTO_NOTES_END -->
+
+</div>
 
 ## 学习标签
 
